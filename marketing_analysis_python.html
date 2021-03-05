@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>printify_analysis</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>marketing_analysis</title>
 
 
 
@@ -3311,7 +3311,7 @@ div#maintoolbar {
         }
     });
 </script>
-    
+
   </style>
 
 
@@ -7807,7 +7807,7 @@ form{
   .bp3-running-text table th, table.bp3-html-table th{
     color:#182026;
     font-weight:600; }
-  
+
   .bp3-running-text table td,
   table.bp3-html-table td{
     color:#182026; }
@@ -17494,17 +17494,17 @@ a.anchor-link {
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: { 
-                    automatic: true 
+                    linebreaks: {
+                    automatic: true
                     }
                 },
                 "HTML-CSS": {
-                    linebreaks: { 
-                    automatic: true 
+                    linebreaks: {
+                    automatic: true
                     }
                 }
             });
-        
+
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     }
@@ -17598,7 +17598,7 @@ a.anchor-link {
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[411]:</div>
 
 
@@ -17763,7 +17763,7 @@ a.anchor-link {
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -17771,23 +17771,23 @@ a.anchor-link {
 <pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
 RangeIndex: 255662 entries, 0 to 255661
 Data columns (total 15 columns):
- #   Column                 Non-Null Count   Dtype  
----  ------                 --------------   -----  
+ #   Column                 Non-Null Count   Dtype
+---  ------                 --------------   -----
  0   Order_Id               255662 non-null  float64
- 1   User_Id                255662 non-null  int64  
- 2   Date_Sent              255662 non-null  object 
- 3   Order_Type             255662 non-null  object 
- 4   Order_Status           255662 non-null  object 
- 5   Sales_Channel_Id       255662 non-null  int64  
- 6   Total_GMV              255662 non-null  int64  
- 7   Device                 255662 non-null  object 
- 8   Browser                255662 non-null  object 
- 9   Marketing_Channel      255662 non-null  object 
- 10  Country                255662 non-null  object 
- 11  Marketing_Emails_Sent  255662 non-null  int64  
- 12  Routed_Order           255662 non-null  object 
- 13  Shipping_Method        255662 non-null  object 
- 14  Taxed                  255662 non-null  object 
+ 1   User_Id                255662 non-null  int64
+ 2   Date_Sent              255662 non-null  object
+ 3   Order_Type             255662 non-null  object
+ 4   Order_Status           255662 non-null  object
+ 5   Sales_Channel_Id       255662 non-null  int64
+ 6   Total_GMV              255662 non-null  int64
+ 7   Device                 255662 non-null  object
+ 8   Browser                255662 non-null  object
+ 9   Marketing_Channel      255662 non-null  object
+ 10  Country                255662 non-null  object
+ 11  Marketing_Emails_Sent  255662 non-null  int64
+ 12  Routed_Order           255662 non-null  object
+ 13  Shipping_Method        255662 non-null  object
+ 14  Taxed                  255662 non-null  object
 dtypes: float64(1), int64(4), object(10)
 memory usage: 29.3+ MB
 </pre>
@@ -17802,7 +17802,7 @@ memory usage: 29.3+ MB
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 
-<pre><code>Dataset is of a medium size with around 250,000 rows and 15 columns. 
+<pre><code>Dataset is of a medium size with around 250,000 rows and 15 columns.
 
 Columns don't have any null values and most of the them have right data types (except date_sent which should be converted to datetime)</code></pre>
 
@@ -17829,7 +17829,7 @@ Columns don't have any null values and most of the them have right data types (e
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[413]:</div>
 
 
@@ -17892,7 +17892,7 @@ dtype: int64</pre>
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -18142,20 +18142,20 @@ Name: taxed, dtype: int64
     <span class="n">fig</span><span class="o">.</span><span class="n">set_canvas</span><span class="p">(</span><span class="n">new_manager</span><span class="o">.</span><span class="n">canvas</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">plot_retention</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">orders</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
-    
+
     <span class="c1">#instantiating figure &amp; axis objects</span>
     <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;xkcd:white&#39;</span><span class="p">)</span>
     <span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-    
+
     <span class="c1">#creating empty dataframe to concat all df later on</span>
     <span class="n">total</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
-    
+
     <span class="c1">#Part 1: inetrate over subcategories in specified column</span>
     <span class="k">for</span> <span class="n">subcategory</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">dataframe</span><span class="p">[</span><span class="n">col</span><span class="p">]):</span>
         <span class="n">user_dict</span><span class="o">=</span><span class="p">{}</span>
         <span class="n">user_list</span><span class="o">=</span><span class="p">[]</span>
-        
+
         <span class="c1">#Part 2: interate over user ids that belong to specific category</span>
         <span class="c1">#and count number of repetitive purchases</span>
         <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">dataframe</span><span class="p">[</span><span class="n">dataframe</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">==</span><span class="n">subcategory</span><span class="p">][</span><span class="s1">&#39;user_id&#39;</span><span class="p">]:</span>
@@ -18164,27 +18164,27 @@ Name: taxed, dtype: int64
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">user_dict</span><span class="p">[</span><span class="n">user</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
             <span class="n">user_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">user_dict</span><span class="p">[</span><span class="n">user</span><span class="p">])</span> <span class="c1">#how many repetitive orders each unique customer made</span>
-        
+
         <span class="c1">#Part 3: transform created list to dataframe and normalize values</span>
         <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">user_list</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;order&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;order&#39;</span><span class="p">)[</span><span class="s1">&#39;order&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
         <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">orders_number</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
-        
+
         <span class="c1">#limiting final dataframe to specific orders number (def=20)</span>
         <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;orders_number&#39;</span><span class="p">]</span><span class="o">&lt;=</span><span class="n">orders</span><span class="p">]</span>
-        
+
         <span class="c1">#calculating retention rate percentage </span>
         <span class="n">df</span><span class="p">[</span><span class="s1">&#39;percent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;frequency&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;frequency&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span>
-        
+
         <span class="c1">#creating total dataframe that will be used when plotting heatmap (seaborn)</span>
         <span class="n">pre_total</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
         <span class="n">pre_total</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">subcategory</span><span class="p">)]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;percent&#39;</span><span class="p">]</span>
         <span class="n">total</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pre_total</span><span class="p">,</span> <span class="n">total</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-        
+
         <span class="c1">#Part 4: creating linear plots for retention</span>
-        
+
         <span class="c1">#creating ax1 plot</span>
         <span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;orders_number&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;frequency&#39;</span><span class="p">])</span>
-        
+
         <span class="c1">#editing style of ax1 plot</span>
         <span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Retention plot for </span><span class="si">{}</span><span class="s1">s (Number of orders) </span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">subcategory</span><span class="p">))</span>
         <span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Number of orders per customer&#39;</span><span class="p">)</span>
@@ -18192,10 +18192,10 @@ Name: taxed, dtype: int64
         <span class="n">ax1</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">orders</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
         <span class="n">ax1</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">orders</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
         <span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">dataframe</span><span class="p">[</span><span class="n">col</span><span class="p">]),</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">s:&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">col</span><span class="p">))</span>
-        
+
         <span class="c1">#creating ax2 plot</span>
         <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;orders_number&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;percent&#39;</span><span class="p">])</span>
-        
+
         <span class="c1">#editing style of ax2 plot</span>
         <span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Retention plot for </span><span class="si">{}</span><span class="s1">s (Percent from orders) </span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">subcategory</span><span class="p">))</span>
         <span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Number of orders per customer&#39;</span><span class="p">)</span>
@@ -18206,15 +18206,15 @@ Name: taxed, dtype: int64
 
     <span class="c1">#showing lineplot of retention rates</span>
     <span class="n">show_figure</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
-    
+
     <span class="c1">#Part 5: creating heatmap plot using seaborn library</span>
-    
+
     <span class="c1">#creating figure and axes objects</span>
     <span class="n">fig2</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;xkcd:white&#39;</span><span class="p">)</span>
-    
+
     <span class="c1">#creating seaborn plot</span>
     <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">total</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">square</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">rocket_r</span><span class="p">,</span> <span class="n">cbar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;.1f&#39;</span><span class="p">)</span>
-    
+
     <span class="c1">#editing style of heatmap plot</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">orders</span><span class="o">+</span><span class="mf">0.5</span><span class="p">))</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">orders</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
@@ -18231,7 +18231,7 @@ Name: taxed, dtype: int64
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 
-<pre><code>Above we succesfully defined plot_retention function that plots retention rates of our customers. 
+<pre><code>Above we succesfully defined plot_retention function that plots retention rates of our customers.
 
 Lets finally start plotting and analysing!</code></pre>
 
@@ -18266,7 +18266,7 @@ Lets finally start plotting and analysing!</code></pre>
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -18282,7 +18282,7 @@ Lets finally start plotting and analysing!</code></pre>
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -18328,7 +18328,7 @@ Lets finally start plotting and analysing!</code></pre>
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[417]:</div>
 
 
@@ -18428,7 +18428,7 @@ Lets finally start plotting and analysing!</code></pre>
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[418]:</div>
 
 
@@ -18503,7 +18503,7 @@ Name: user_id, dtype: float64</pre>
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -18519,7 +18519,7 @@ Name: user_id, dtype: float64</pre>
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -18566,7 +18566,7 @@ Name: user_id, dtype: float64</pre>
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[420]:</div>
 
 
@@ -18692,8 +18692,8 @@ Name: user_id, dtype: float64</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[422]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">score_segmentation</span> <span class="o">=</span> <span class="n">rfm</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;rfm_score&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;Recency&#39;</span><span class="p">:</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> 
-                                                   <span class="s1">&#39;Frequency&#39;</span><span class="p">:</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">score_segmentation</span> <span class="o">=</span> <span class="n">rfm</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;rfm_score&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;Recency&#39;</span><span class="p">:</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span>
+                                                   <span class="s1">&#39;Frequency&#39;</span><span class="p">:</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span>
                                                    <span class="s1">&#39;MonetaryValue&#39;</span><span class="p">:[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">]})</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="n">score_segmentation</span>
@@ -18711,7 +18711,7 @@ Name: user_id, dtype: float64</pre>
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[422]:</div>
 
 
@@ -18886,7 +18886,7 @@ Name: user_id, dtype: float64</pre>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 
-<pre><code>We have reduced number of segments to 3 and named them in and intuitive way. 
+<pre><code>We have reduced number of segments to 3 and named them in and intuitive way.
 
 Its time for segment analysis!</code></pre>
 
@@ -18904,8 +18904,8 @@ Its time for segment analysis!</code></pre>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#calculating summary statistics</span>
-<span class="n">segments</span> <span class="o">=</span> <span class="n">rfm</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;rfm_level&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span> <span class="s1">&#39;Recency&#39;</span><span class="p">:</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> 
-                                          <span class="s1">&#39;Frequency&#39;</span><span class="p">:</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> 
+<span class="n">segments</span> <span class="o">=</span> <span class="n">rfm</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;rfm_level&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span> <span class="s1">&#39;Recency&#39;</span><span class="p">:</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span>
+                                          <span class="s1">&#39;Frequency&#39;</span><span class="p">:</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span>
                                           <span class="s1">&#39;MonetaryValue&#39;</span><span class="p">:[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">]})</span>\
                                           <span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">((</span><span class="s1">&#39;MonetaryValue&#39;</span><span class="p">,</span><span class="s1">&#39;mean&#39;</span><span class="p">),</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
@@ -18924,7 +18924,7 @@ Its time for segment analysis!</code></pre>
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[424]:</div>
 
 
@@ -19008,7 +19008,7 @@ Its time for segment analysis!</code></pre>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 
-<pre><code> As we can see, Gold segment has 14 times larger average monetary value than Silver, much higher frequency of orders and the lowest recency. Bronze segment's performance is way below Gold and Silver. 
+<pre><code> As we can see, Gold segment has 14 times larger average monetary value than Silver, much higher frequency of orders and the lowest recency. Bronze segment's performance is way below Gold and Silver.
 
 Next step, map our segments back to the original dataset for further analysis:</code></pre>
 
@@ -19056,7 +19056,7 @@ Next step, map our segments back to the original dataset for further analysis:</
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[426]:</div>
 
 
@@ -19108,7 +19108,7 @@ Since Gold customers have the largest volume and average monetary values we can 
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -19124,7 +19124,7 @@ Since Gold customers have the largest volume and average monetary values we can 
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -19175,7 +19175,7 @@ Since Gold customers have the largest volume and average monetary values we can 
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -19214,7 +19214,7 @@ Last thing to analyse is where each segment comes from and which order type uses
     <span class="n">df</span> <span class="o">=</span> <span class="n">combined</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="n">col</span><span class="p">,</span><span class="s1">&#39;rfm_level&#39;</span><span class="p">])[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">unstack</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span><span class="o">.</span><span class="n">T</span>
     <span class="n">ax</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
-    
+
     <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> by segments&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">col</span><span class="p">))</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Percent from all cutomers in given segment</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">ticks</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;0%&#39;</span><span class="p">,</span> <span class="s1">&#39;50%&#39;</span><span class="p">,</span> <span class="s1">&#39;100%&#39;</span><span class="p">],</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -19222,7 +19222,7 @@ Last thing to analyse is where each segment comes from and which order type uses
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Customer segments&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
     <span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">()</span>
-    
+
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -19238,7 +19238,7 @@ Last thing to analyse is where each segment comes from and which order type uses
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -19254,7 +19254,7 @@ Last thing to analyse is where each segment comes from and which order type uses
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
