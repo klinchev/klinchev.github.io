@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>restaurants_analysis</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>restaurants_analysis</title>
 
 
 
@@ -3311,7 +3311,7 @@ div#maintoolbar {
         }
     });
 </script>
-    
+
   </style>
 
 
@@ -7807,7 +7807,7 @@ form{
   .bp3-running-text table th, table.bp3-html-table th{
     color:#182026;
     font-weight:600; }
-  
+
   .bp3-running-text table td,
   table.bp3-html-table td{
     color:#182026; }
@@ -17494,17 +17494,17 @@ a.anchor-link {
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: { 
-                    automatic: true 
+                    linebreaks: {
+                    automatic: true
                     }
                 },
                 "HTML-CSS": {
-                    linebreaks: { 
-                    automatic: true 
+                    linebreaks: {
+                    automatic: true
                     }
                 }
             });
-        
+
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     }
@@ -17615,7 +17615,7 @@ a.anchor-link {
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -17623,30 +17623,30 @@ a.anchor-link {
 <pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
 Int64Index: 100000 entries, 0 to 99999
 Data columns (total 22 columns):
- #   Column        Non-Null Count   Dtype  
----  ------        --------------   -----  
- 0   review_id     100000 non-null  object 
- 1   user_id       100000 non-null  object 
- 2   business_id   100000 non-null  object 
+ #   Column        Non-Null Count   Dtype
+---  ------        --------------   -----
+ 0   review_id     100000 non-null  object
+ 1   user_id       100000 non-null  object
+ 2   business_id   100000 non-null  object
  3   stars_x       100000 non-null  float64
- 4   useful        100000 non-null  int64  
- 5   funny         100000 non-null  int64  
- 6   cool          100000 non-null  int64  
- 7   text          100000 non-null  object 
- 8   date          100000 non-null  object 
- 9   name          100000 non-null  object 
- 10  address       100000 non-null  object 
- 11  city          100000 non-null  object 
- 12  state         100000 non-null  object 
- 13  postal_code   100000 non-null  object 
+ 4   useful        100000 non-null  int64
+ 5   funny         100000 non-null  int64
+ 6   cool          100000 non-null  int64
+ 7   text          100000 non-null  object
+ 8   date          100000 non-null  object
+ 9   name          100000 non-null  object
+ 10  address       100000 non-null  object
+ 11  city          100000 non-null  object
+ 12  state         100000 non-null  object
+ 13  postal_code   100000 non-null  object
  14  latitude      100000 non-null  float64
  15  longitude     100000 non-null  float64
  16  stars_y       100000 non-null  float64
- 17  review_count  100000 non-null  int64  
- 18  is_open       100000 non-null  int64  
- 19  attributes    97370 non-null   object 
- 20  categories    99981 non-null   object 
- 21  hours         92517 non-null   object 
+ 17  review_count  100000 non-null  int64
+ 18  is_open       100000 non-null  int64
+ 19  attributes    97370 non-null   object
+ 20  categories    99981 non-null   object
+ 21  hours         92517 non-null   object
 dtypes: float64(4), int64(5), object(13)
 memory usage: 17.5+ MB
 </pre>
@@ -17679,7 +17679,7 @@ memory usage: 17.5+ MB
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[293]:</div>
 
 
@@ -17762,7 +17762,7 @@ memory usage: 17.5+ MB
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 
-<pre><code>We have merged 2 datasets on business_id column, first dataset - reviews information, second - business information. The second dataset was nessesary as we need to know names of restaurants, locations and types. 
+<pre><code>We have merged 2 datasets on business_id column, first dataset - reviews information, second - business information. The second dataset was nessesary as we need to know names of restaurants, locations and types.
 
 Brief data summary: 100,000 rows and 22 columns, everything looks clean and doesn't seem to have any null (empty) values. All but 'date' columns are in right data format ('date' we will convert to datetime later'). Therefore, we can proceed further.</code></pre>
 
@@ -17861,7 +17861,7 @@ Brief data summary: 100,000 rows and 22 columns, everything looks clean and does
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -17909,7 +17909,7 @@ The latest date:  2005-04-14 18:26:11
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[294]:</div>
 
 
@@ -17949,7 +17949,7 @@ The latest date:  2005-04-14 18:26:11
 <span class="n">names_bool</span><span class="o">=</span><span class="p">[]</span>
 <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">combined</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]:</span>
     <span class="n">names_bool</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span> <span class="ow">in</span> <span class="n">top_names</span><span class="p">)</span>
-    
+
 <span class="n">combined</span> <span class="o">=</span> <span class="n">combined</span><span class="p">[</span><span class="n">names_bool</span><span class="p">]</span>
 </pre></div>
 
@@ -17962,7 +17962,7 @@ The latest date:  2005-04-14 18:26:11
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 
-<pre><code>We decided to pick only top 100 most popular restaurants becuase others have very little amount of reviews and hence our analysing would be statistically insignificant. 
+<pre><code>We decided to pick only top 100 most popular restaurants becuase others have very little amount of reviews and hence our analysing would be statistically insignificant.
 </code></pre>
 <hr>
 
@@ -17995,16 +17995,16 @@ The latest date:  2005-04-14 18:26:11
 <span class="k">def</span> <span class="nf">clean_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
 
     <span class="n">text_cleaned</span> <span class="o">=</span> <span class="n">text</span>
-    
+
     <span class="c1">#converting to spicy object</span>
     <span class="n">text_cleaned</span> <span class="o">=</span> <span class="n">load_en</span><span class="p">(</span><span class="n">text_cleaned</span><span class="p">)</span>
-    
+
     <span class="c1">#lemmatization &amp; keeping only NOUNs since they indicate specific problems</span>
     <span class="n">text_cleaned</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span><span class="o">.</span><span class="n">lemma_</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">text_cleaned</span> <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">pos_</span><span class="o">==</span><span class="s1">&#39;NOUN&#39;</span><span class="p">]</span>
-    
+
     <span class="c1">#removing stopwords</span>
     <span class="n">text_cleaned</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">text_cleaned</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stopwords</span><span class="p">])</span>
-    
+
     <span class="k">return</span> <span class="n">text_cleaned</span>
 </pre></div>
 
@@ -18059,25 +18059,25 @@ The latest date:  2005-04-14 18:26:11
         <span class="k">else</span><span class="p">:</span>
             <span class="n">freq</span><span class="p">[</span><span class="n">word</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
     <span class="k">return</span> <span class="n">freq</span>
-  
-    
+
+
 <span class="c1"># function to plot most frequent terms </span>
-<span class="k">def</span> <span class="nf">freq_words</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">terms</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">graph</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">table</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span> 
-    
-    <span class="n">all_words</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">text</span> <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">x</span><span class="p">])</span> 
-    <span class="n">all_words</span> <span class="o">=</span> <span class="n">all_words</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> 
+<span class="k">def</span> <span class="nf">freq_words</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">terms</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">graph</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">table</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+
+    <span class="n">all_words</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">text</span> <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">x</span><span class="p">])</span>
+    <span class="n">all_words</span> <span class="o">=</span> <span class="n">all_words</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
     <span class="n">all_words</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">all_words</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;restaurant&#39;</span><span class="p">]]</span>
-    <span class="n">fdist</span> <span class="o">=</span> <span class="n">FreqDist</span><span class="p">(</span><span class="n">all_words</span><span class="p">)</span> 
-    <span class="n">words_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;word&#39;</span><span class="p">:</span><span class="nb">list</span><span class="p">(</span><span class="n">fdist</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span><span class="s1">&#39;count&#39;</span><span class="p">:</span><span class="nb">list</span><span class="p">(</span><span class="n">fdist</span><span class="o">.</span><span class="n">values</span><span class="p">())})</span> 
-    
+    <span class="n">fdist</span> <span class="o">=</span> <span class="n">FreqDist</span><span class="p">(</span><span class="n">all_words</span><span class="p">)</span>
+    <span class="n">words_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;word&#39;</span><span class="p">:</span><span class="nb">list</span><span class="p">(</span><span class="n">fdist</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span><span class="s1">&#39;count&#39;</span><span class="p">:</span><span class="nb">list</span><span class="p">(</span><span class="n">fdist</span><span class="o">.</span><span class="n">values</span><span class="p">())})</span>
+
     <span class="k">if</span> <span class="n">graph</span><span class="p">:</span>
         <span class="c1"># selecting top N most frequent words </span>
-        <span class="n">d</span> <span class="o">=</span> <span class="n">words_df</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">&quot;count&quot;</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">terms</span><span class="p">)</span>      
-        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span> 
-        <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">d</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;word&quot;</span><span class="p">],</span> <span class="n">y</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">])</span> 
-        <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span> <span class="o">=</span> <span class="s1">&#39;Count&#39;</span><span class="p">)</span> 
+        <span class="n">d</span> <span class="o">=</span> <span class="n">words_df</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">&quot;count&quot;</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">terms</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">d</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;word&quot;</span><span class="p">],</span> <span class="n">y</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">])</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span> <span class="o">=</span> <span class="s1">&#39;Count&#39;</span><span class="p">)</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-    
+
     <span class="k">if</span> <span class="n">table</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">words_df</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">&quot;count&quot;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">terms</span><span class="p">)</span>
 </pre></div>
@@ -18111,7 +18111,7 @@ The latest date:  2005-04-14 18:26:11
 <span class="c1">#generating plot using MatPlotLib library</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
 <span class="n">labels</span><span class="o">=</span><span class="n">top_complains</span><span class="p">[</span><span class="s1">&#39;word&#39;</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">top_complains</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">],</span> <span class="n">autopct</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%.1f%%</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">explode</span><span class="o">=</span><span class="p">[</span><span class="mf">0.05</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">top_complains</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]),</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">top_complains</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">],</span> <span class="n">autopct</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%.1f%%</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">explode</span><span class="o">=</span><span class="p">[</span><span class="mf">0.05</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">top_complains</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]),</span>
         <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">pctdistance</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Top topics for customer&#39;s complains across all restaurants&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">);</span>
 </pre></div>
@@ -18128,7 +18128,7 @@ The latest date:  2005-04-14 18:26:11
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -18173,11 +18173,11 @@ Lets look at the most problematic areas for top 5 most popular restaurants (acco
 <span class="n">r_names</span> <span class="o">=</span> <span class="n">combined</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">r_names</span><span class="p">:</span>
-    
+
     <span class="n">name_reviews</span> <span class="o">=</span> <span class="n">combined</span><span class="p">[</span><span class="n">combined</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">name</span><span class="p">]</span>
-    
+
     <span class="n">name_neg_rev</span> <span class="o">=</span> <span class="n">name_reviews</span><span class="p">[</span><span class="n">name_reviews</span><span class="p">[</span><span class="s1">&#39;stars_x&#39;</span><span class="p">]</span><span class="o">&lt;=</span><span class="mi">3</span><span class="p">]</span>
-    
+
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">      Reviews analysis for </span><span class="si">{}</span><span class="s1"> based on </span><span class="si">{}</span><span class="s1"> reviews&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">name_reviews</span><span class="p">)))</span>
     <span class="n">freq_words</span><span class="p">(</span><span class="n">name_neg_rev</span><span class="p">[</span><span class="s1">&#39;cleaned_text&#39;</span><span class="p">],</span> <span class="n">table</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">terms</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 </pre></div>
@@ -18194,7 +18194,7 @@ Lets look at the most problematic areas for top 5 most popular restaurants (acco
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -18207,7 +18207,7 @@ Lets look at the most problematic areas for top 5 most popular restaurants (acco
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -18223,7 +18223,7 @@ Lets look at the most problematic areas for top 5 most popular restaurants (acco
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -18236,7 +18236,7 @@ Lets look at the most problematic areas for top 5 most popular restaurants (acco
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -18252,7 +18252,7 @@ Lets look at the most problematic areas for top 5 most popular restaurants (acco
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -18265,7 +18265,7 @@ Lets look at the most problematic areas for top 5 most popular restaurants (acco
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -18281,7 +18281,7 @@ Lets look at the most problematic areas for top 5 most popular restaurants (acco
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -18294,7 +18294,7 @@ Lets look at the most problematic areas for top 5 most popular restaurants (acco
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -18310,7 +18310,7 @@ Lets look at the most problematic areas for top 5 most popular restaurants (acco
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -18323,7 +18323,7 @@ Lets look at the most problematic areas for top 5 most popular restaurants (acco
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -18346,7 +18346,7 @@ Lets look at the most problematic areas for top 5 most popular restaurants (acco
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="2-3.-Performing-basket-analysis-and-calculating-service-problems-coefficient">2-3. Performing basket analysis and calculating service problems coefficient<a class="anchor-link" href="#2-3.-Performing-basket-analysis-and-calculating-service-problems-coefficient">&#182;</a></h2>
 <pre><code>As we saw from above graphs, there are a lot of problems that restaurants face, but in reality most of the complains can be aggregated under a few categories. Such that:
-food, drinks, meat, lettuce, chicken - all related to Food/Kitchen category of problems. 
+food, drinks, meat, lettuce, chicken - all related to Food/Kitchen category of problems.
 
 Therefore, we aggregated similar problems for service and they are: service, staff, time, waiter, manager, server, order, place, minute, line, price, table.
 
@@ -18381,7 +18381,7 @@ Now, its time for final analysis. Calculating service problems coefficients for 
 
 <div class="jp-OutputArea-child">
 
-    
+
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[480]:</div>
 
 
